@@ -1,0 +1,53 @@
+generated: '2026-08-04'
+method: searched
+source: https://status.commsor.com/ + https://commsor.theswarm.com/ + https://www.commsor.com/
+summary: >-
+  Commsor publishes an operational status page but no API versioning policy, no
+  deprecation policy, no Sunset/Deprecation header contract, and no SLA. The
+  dominant lifecycle fact is corporate, not technical: on 2026-07-23 The Swarm
+  announced it is acquiring Commsor and winding down the Commsor products,
+  folding selected features into The Swarm. No product sunset date has been
+  published.
+company_status:
+  state: acquired
+  acquirer: The Swarm
+  acquirer_url: https://www.theswarm.com/
+  announced: '2026-07-23'
+  announcement_url: https://commsor.theswarm.com/
+  product_disposition: wind-down
+  sunset_date: null
+  migration_path: features incorporated into The Swarm; no published customer migration
+    procedure or data-export deadline
+  quote: 'we''re winding down the Commsor products but incorporating beloved features
+    into The Swarm'
+  banner: 'A site-wide banner on https://www.commsor.com/ reads "The Swarm is Acquiring
+    Commsor - Read the news"'
+versioning:
+  scheme: null
+  current: null
+  docs: null
+  note: no public API versioning policy is published
+deprecation:
+  policy_url: null
+  sunset_header: null
+  note: no RFC 8594 Sunset/Deprecation contract published; no Deprecation pointer wired
+sla:
+  url: null
+  uptime_target: null
+status_page:
+  url: https://status.commsor.com/
+  provider: Better Stack
+  http_status: 200
+  components:
+  - name: Commsor Application
+    description: 'The main interface for interacting with the Commsor app. If it''s
+      down, you may be unable to log in or access your account.'
+    state: Operational
+  observed: '2026-08-04'
+changelog:
+  published: false
+  note: >-
+    https://www.commsor.com/changelog returns 404. Five /changelog/* URLs appear in
+    the sitemap but are unused Webflow template records carrying Lorem Ipsum body
+    text — they are NOT a product changelog and no ChangeLog pointer is wired.
+deprecated_operations: []

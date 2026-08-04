@@ -1,0 +1,42 @@
+generated: '2026-08-04'
+method: probed
+source: live GET of /.well-known/* on every Commsor host
+summary: >-
+  No /.well-known/ discovery document is published on any Commsor host. The
+  marketing site is served from Webflow and answers 404 for every well-known
+  path; the application host (dashboard.commsor.com, Vercel) answers 404 for
+  /.well-known/* and redirects all other unknown paths to its /signin SPA
+  shell. Recorded as a negative result — no WellKnown pointer is wired because
+  no document exists.
+hosts:
+- host: https://www.commsor.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+- host: https://dashboard.commsor.com
+  documents:
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/security.txt
+    status: 404
+- host: https://support.commsor.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+notes:
+- 'A security contact IS published, but as page copy at https://www.commsor.com/security
+  (security@commsor.com), not as an RFC 9116 security.txt.'

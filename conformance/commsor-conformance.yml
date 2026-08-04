@@ -1,0 +1,43 @@
+generated: '2026-08-04'
+method: searched
+source: https://www.commsor.com/security
+summary: >-
+  Commsor publishes two compliance postures in prose (SOC 2, GDPR). It publishes
+  no machine-readable API contract, so no API-level standard (OpenAPI, OAuth 2.0,
+  OIDC, RFC 9457, JSON:API) can be asserted or refuted from artifacts — those are
+  recorded as unknown, not false, because the private/legacy API surface is not
+  publicly documented.
+standards:
+- id: soc2
+  conforms: true
+  evidence: 'https://www.commsor.com/security — "Commsor is SOC 2 compliant, ensuring
+    our systems meet rigorous standards for security, availability, and confidentiality."'
+- id: gdpr
+  conforms: true
+  evidence: 'https://www.commsor.com/security — "We are fully GDPR compliant and uphold
+    the principles of data protection for all users, especially those in the EU."'
+- id: iso-27001
+  conforms: false
+  evidence: not claimed on the published security page
+- id: pci-dss
+  conforms: false
+  evidence: not claimed; Commsor is not a payments provider
+- id: hipaa
+  conforms: false
+  evidence: not claimed
+- id: rfc9116-security-txt
+  conforms: false
+  evidence: 'https://www.commsor.com/.well-known/security.txt returns 404'
+- id: openapi
+  conforms: false
+  evidence: no OpenAPI/Swagger document found on any Commsor host (see x-contract-discovery
+    in apis.yml)
+- id: oauth2
+  conforms: unknown
+  evidence: no public API documentation describes an authorization model
+- id: rfc9457-problem-details
+  conforms: unknown
+  evidence: no public API documentation or spec to inspect
+- id: llmstxt
+  conforms: true
+  evidence: 'https://support.commsor.com/llms.txt returns 200 (knowledge-base index)'

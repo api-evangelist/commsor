@@ -1,0 +1,50 @@
+generated: '2026-08-04'
+method: searched
+probe: true
+url: https://www.commsor.com/security
+type: security-page
+summary: >-
+  Commsor does not operate a dedicated trust center (no trust.commsor.com,
+  security.commsor.com, Vanta/Drata/SafeBase portal, and no public document
+  request flow). It publishes a single security page on the marketing site that
+  names two compliance postures — SOC 2 and GDPR — in prose, without report
+  dates, auditor, Type I/II designation, scope, or a downloadable report.
+certifications:
+- name: SOC 2
+  claimed: true
+  type: null
+  report_available: false
+  auditor: null
+  statement: 'Commsor is SOC 2 compliant, ensuring our systems meet rigorous standards
+    for security, availability, and confidentiality.'
+- name: GDPR
+  claimed: true
+  report_available: false
+  statement: 'We are fully GDPR compliant and uphold the principles of data protection
+    for all users, especially those in the EU.'
+not_claimed:
+- ISO 27001
+- ISO 27017
+- ISO 27018
+- PCI DSS
+- HIPAA
+- FedRAMP
+- CSA STAR
+- SOC 3
+infrastructure_statements:
+- 'Our infrastructure is hosted with trusted cloud providers that offer strong physical
+  and network security.'
+- 'Access to production environments is limited to authorized personnel and monitored
+  continuously.'
+probed_hosts:
+- {url: 'https://trust.commsor.com/', found: false}
+- {url: 'https://security.commsor.com/', found: false}
+- {url: 'https://www.commsor.com/security', found: true, http_status: 200}
+evidence:
+- source: https://www.commsor.com/security
+  keywords: [soc 2, gdpr, compliance, security]
+  fetched: '2026-08-04'
+gaps:
+- SOC 2 claimed but no Type designation, audit window, auditor, or report-request flow.
+- No subprocessor list, no data-residency statement, no encryption specifics.
+- No named cloud provider(s).

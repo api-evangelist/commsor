@@ -42,5 +42,26 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Commsor is a company surfaced via the API Evangelist harvest backlog (source: secondary-market) and added to the network as a stub for full-pipeline profiling.
+Commsor is a go-to-network (GTN) platform for B2B revenue teams. It maps the collective
+relationship graph of a company's employees, executives, investors, advisors, customers
+and community, then surfaces the warmest path into a target account so sellers and
+marketers can source pipeline through trusted introductions and referrals instead of cold
+outbound.
+
+**Status.** On 2026-07-23 The Swarm announced it is acquiring Commsor and winding down the
+Commsor products, folding selected features into The Swarm. No product sunset date has been
+published; the application and status page remain live.
+
+**API surface.** Commsor publishes no public developer portal, OpenAPI definition, or
+self-serve API documentation. Every `*.commsor.com` API-shaped subdomain resolves to the
+Webflow wildcard CDN; the application host answers unknown paths with a single-page-app
+shell. A legacy REST API existed on the retired community-operations platform and was
+enabled per account on request. A Zapier app remains the documented programmatic write
+path. See `x-contract-discovery` in `apis.yml` for the full probe record.
+
+- https://www.commsor.com/
+- https://status.commsor.com/
+- https://www.commsor.com/security
+- https://support.commsor.com/
+- https://commsor.theswarm.com/ — acquisition announcement
 - https://forgeglobal.com/commsor_stock/
