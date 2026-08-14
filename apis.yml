@@ -58,6 +58,45 @@ x-contract-discovery:
     docs_url: null
     docs_status: 'former support.commsor.com/article/38-integrating-with-commsors-api
       returns 404'
+  reverified:
+    date: '2026-08-13'
+    result: none
+    summary: >-
+      Re-probed on 2026-08-13 with the same negative result. api., docs. and
+      developers.commsor.com now refuse TCP entirely (CNAME to cdn.webflow.com,
+      no Webflow site bound); dashboard.commsor.com (Next.js on Vercel) still
+      answers /openapi.json, /api/openapi.json and /swagger.json with its SPA
+      shell and 404s every /.well-known/ path including agent-card.json,
+      agent.json, oauth-authorization-server and oauth-protected-resource. No
+      OpenAPI, no GraphQL SDL, no MCP server, no A2A agent card.
+  open_source_surface:
+    note: >-
+      NOT a Commsor product API — recorded so the finding is not lost, and
+      deliberately NOT registered as an apis[] entry. The Commsor GitHub
+      organization (https://github.com/commsor, profile links to commsor.com and
+      X @commsor) hosts 11 public repositories, led by Titanoboa, an AGPL-3.0 JVM
+      workflow-orchestration platform with 921 stars. Titanoboa carries a real,
+      public, human-readable REST API reference in its GitHub wiki (Authentication,
+      Job, Repository and Systems APIs, with request methods, paths and attribute
+      tables) but publishes NO OpenAPI, Swagger, Postman collection or JSON Schema
+      anywhere. The project is independently branded at titanoboa.io, was authored
+      by Miro Kubicek, is published to Clojars under the personal account "miro",
+      and its repository was transferred into this org (github.com/mikub/titanoboa
+      301-redirects to github.com/commsor/titanoboa). It is a self-hosted engine
+      with no vendor-operated base URL, is unrelated to the Go-to-Network product
+      Commsor sells, and last shipped in 2022 — so it is attributed here as an
+      open-source surface hosted by the company, not as a Commsor API.
+    org: https://github.com/commsor
+    repositories: 11
+    api_documentation: https://github.com/commsor/titanoboa/wiki/API-Documentation
+    api_documentation_status: 200
+    machine_readable_spec: false
+    last_repository_push: '2024-09-17'
+  broken_published_links:
+  - {url: 'https://www.commsor.com/pricing', status: 404, note: 'linked from the site
+     nav'}
+  - {url: 'https://help.commsor.com/en/', status: 302, note: 'linked from the site
+     nav as Help Center; 302s off-domain to https://docs.platform.clearslide.com'}
   zapier_app:
     url: https://zapier.com/apps/commsor/integrations
     status: 200
@@ -66,7 +105,7 @@ x-contract-discovery:
     - Create/Update Channel Member in the Zapier Channel
 specificationVersion: '0.20'
 created: '2026-08-04'
-modified: '2026-08-04'
+modified: '2026-08-13'
 tags:
 - Company
 - Sales
@@ -122,8 +161,33 @@ common:
   url: security/commsor-vulnerability-disclosure.yml
 - type: TrustCenter
   url: security/commsor-trust-center.yml
+- type: GitHubOrganization
+  url: https://github.com/commsor
+- type: Packages
+  url: packages/commsor-packages.yml
 x-enrichment:
-  date: '2026-08-04'
-  status: enriched
-  artifacts_added: 7
+  date: '2026-08-13'
+  status: minimal
+  artifacts_added: 3
   pass: local-v1
+x-coverage:
+  state: unreadable
+  reason: no-machine-readable-spec
+  detail: >-
+    Commsor ships no developer program for its Go-to-Network product — the nav
+    "Pricing" link 404s, the nav "Help Center" link 302s off-domain to
+    docs.platform.clearslide.com, and the only public API reference anywhere under
+    this company is a GitHub wiki page (the Titanoboa workflow engine's REST API,
+    in Commsor's own org) that publishes no OpenAPI, Postman collection or schema.
+  evidence:
+  - url: https://github.com/commsor/titanoboa/wiki/API-Documentation
+    status: 200
+  - url: https://dashboard.commsor.com/openapi.json
+    status: 200
+  - url: https://www.commsor.com/pricing
+    status: 404
+  - url: https://help.commsor.com/en/
+    status: 302
+  - url: https://www.commsor.com/.well-known/agent-card.json
+    status: 404
+  checked: '2026-08-13'
