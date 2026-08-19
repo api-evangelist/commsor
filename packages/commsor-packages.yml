@@ -1,0 +1,86 @@
+generated: '2026-08-13'
+method: searched
+source: >-
+  npm registry search, PyPI, RubyGems, crates.io, NuGet, pkg.go.dev, Packagist,
+  Clojars, and the Commsor GitHub organization (https://github.com/commsor)
+summary: >-
+  Commsor publishes NO first-party client library for its Go-to-Network product.
+  There is no Commsor SDK on npm, PyPI, RubyGems, Packagist, crates.io, NuGet,
+  Maven Central or pkg.go.dev, and no SDK is referenced anywhere on the marketing
+  site or in the Pylon knowledge base. The documented programmatic paths are the
+  HubSpot connector, CSV list upload, and the Zapier app — none of which ships a
+  package. No SDKs pointer is wired because no client library exists.
+client_sdks: []
+sdk_count: 0
+registries_searched:
+- {registry: npm, query: commsor, results: 0, url: 'https://registry.npmjs.org/-/v1/search?text=commsor'}
+- {registry: pypi, query: commsor, results: 0, url: 'https://pypi.org/pypi/commsor/json',
+   http_status: 404}
+- {registry: rubygems, query: commsor, results: 0}
+- {registry: packagist, query: commsor, results: 0}
+- {registry: crates.io, query: commsor, results: 0}
+- {registry: nuget, query: commsor, results: 0}
+- {registry: maven-central, query: commsor, results: 0}
+- {registry: pkg.go.dev, query: commsor, results: 0}
+open_source_artifacts:
+  note: >-
+    ATTRIBUTION CARE — these are NOT Commsor API client libraries and they do not
+    wrap any Commsor product API. They are the published artifacts of Titanoboa, an
+    AGPL-3.0 JVM workflow-orchestration platform whose repositories now live in the
+    Commsor GitHub organization (https://github.com/commsor/titanoboa; the upstream
+    path https://github.com/mikub/titanoboa 301-redirects to it, evidencing the
+    repository transfer). Titanoboa is independently branded at titanoboa.io, was
+    authored by Miro Kubicek, and is published to Clojars under the personal account
+    "miro" — so `official: false` for Commsor. Recorded here because they are real,
+    dated, publicly-published artifacts hosted under this company's GitHub org, and
+    because their release dates are the only provider-adjacent decay evidence
+    available: every one of them last shipped in 2018-2019.
+  packages:
+  - language: clojure
+    registry: clojars
+    name: titanoboa/titanoboa
+    url: https://clojars.org/titanoboa
+    install: '[titanoboa "0.7.1"]'
+    version: 0.7.1
+    published: '2018-11-22'
+    license: AGPL-3.0
+    official: false
+    note: >-
+      Clojars metadata lastUpdated 20181122210420. The GitHub repository kept
+      releasing past this point (tags to 1.0.0-alfa.1, 2021-02-04) — the registry
+      artifact is four releases behind the source, so a consumer resolving from
+      Clojars gets 0.7.1, not the newest code.
+  - language: java
+    registry: clojars
+    name: io.titanoboa/titanoboa-java
+    url: https://clojars.org/io.titanoboa/titanoboa-java
+    install: 'io.titanoboa/titanoboa-java {:mvn/version "0.1.0"}'
+    version: 0.1.0
+    published: '2018-11-28'
+    official: false
+  - language: clojure
+    registry: clojars
+    name: io.titanoboa.tasklet/*
+    url: https://clojars.org/search?q=titanoboa
+    install: null
+    version: 0.1.1
+    published: '2019-02-28'
+    official: false
+    note: >-
+      A family of 19 Clojars artifacts under the io.titanoboa.tasklet group
+      (http-client, aws-s3, aws-ec2, pdf, ...) — ready-made workflow step functions.
+      Version/date shown is the most recently published member (http-client 0.1.1,
+      lastUpdated 20190228200404); the group as a whole has not shipped since 2019.
+  repositories:
+  - {name: titanoboa, url: 'https://github.com/commsor/titanoboa', language: Clojure,
+     stars: 921, license: AGPL-3.0, last_push: '2022-09-16', fork: false}
+  - {name: titanoboa-tasklets, url: 'https://github.com/commsor/titanoboa-tasklets',
+     language: Clojure, stars: 15, license: Unlicense, last_push: '2022-01-05'}
+  - {name: titanoboa-sample-workflows, url: 'https://github.com/commsor/titanoboa-sample-workflows',
+     language: Clojure, stars: 17, license: Unlicense, last_push: '2020-12-05'}
+  - {name: titanoboa-gui, url: 'https://github.com/commsor/titanoboa-gui', language: JavaScript,
+     stars: 3, last_push: '2021-01-22'}
+  - {name: themoviedb-api, url: 'https://github.com/commsor/themoviedb-api', language: Ruby,
+     fork: true, last_push: '2022-08-05'}
+  - {name: render-elasticsearch, url: 'https://github.com/commsor/render-elasticsearch',
+     fork: true, last_push: '2024-09-17'}

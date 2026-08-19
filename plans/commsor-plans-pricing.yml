@@ -1,0 +1,32 @@
+generated: '2026-08-13'
+method: searched
+source: https://www.commsor.com/pricing
+summary: >-
+  Commsor publishes no pricing. The primary navigation on https://www.commsor.com/
+  carries a "Pricing" link to /pricing, and that URL returns HTTP 404 (the Webflow
+  404 page) — the link is broken, not gated. There is no plan table, no tier names,
+  no per-seat or per-credit rate, and no /pricing entry in the sitemap (184 URLs,
+  none under /pricing). The only published commercial path is "Book a demo" and the
+  /get-started form, i.e. an enterprise contact-sales motion. No Pricing pointer is
+  wired in apis.yml because the page the site links to does not exist.
+plan_count: 0
+plans: []
+commercial_model:
+  motion: contact-sales
+  self_serve_signup: false
+  free_tier: null
+  trial: null
+  entry_points:
+  - {label: Book a demo, url: 'https://www.commsor.com/get-started'}
+  - {label: Login, url: 'https://dashboard.commsor.com/signin'}
+evidence:
+- {url: 'https://www.commsor.com/pricing', http_status: 404, note: 'linked from the
+    site nav; returns the Webflow 404 page', fetched: '2026-08-13'}
+- {url: 'https://www.commsor.com/sitemap.xml', http_status: 200, note: '184 URLs, none
+    under /pricing', fetched: '2026-08-13'}
+- {url: 'https://www.commsor.com/get-started', http_status: 200, note: 'demo-request
+    form stands in for pricing', fetched: '2026-08-13'}
+context: >-
+  The site was last published 2026-07-23 — the same day The Swarm announced it is
+  acquiring Commsor and winding down the Commsor products — so the broken pricing
+  link is consistent with a marketing site frozen at the acquisition announcement.

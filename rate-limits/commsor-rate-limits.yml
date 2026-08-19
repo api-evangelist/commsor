@@ -1,0 +1,25 @@
+generated: '2026-08-13'
+method: searched
+source: https://support.commsor.com/ + https://www.commsor.com/
+summary: >-
+  No rate limits are published anywhere on Commsor's public surface, because no
+  public API is documented. The Pylon knowledge base (four articles: Users and
+  Permissions, Connectors, Integrating with HubSpot, Uploading Lists) documents no
+  programmatic interface and therefore no throttling, quota, window, burst, or
+  response-header contract. No X-RateLimit-*, RateLimit-* or Retry-After signal
+  could be observed because there is no reachable unauthenticated API endpoint to
+  observe one on — every commsor.com API-shaped subdomain (api., docs., developers.)
+  resolves to the Webflow wildcard CDN, and dashboard.commsor.com answers unknown
+  paths with its Next.js SPA shell. No RateLimits pointer is wired in apis.yml: this
+  file records a documented absence and must not be scored as a published limit.
+limit_count: 0
+limits: []
+headers: []
+exhaustion_status: null
+evidence:
+- {url: 'https://support.commsor.com/llms.txt', http_status: 200, note: 'knowledge-base
+    index; four non-developer articles, no API or limits article', fetched: '2026-08-13'}
+- {url: 'https://api.commsor.com/', http_status: null, note: 'no TCP connection —
+    CNAME to cdn.webflow.com, not a live API host', fetched: '2026-08-13'}
+- {url: 'https://dashboard.commsor.com/openapi.json', http_status: 200, note: 'Next.js
+    SPA shell, not a spec — no endpoint to observe headers on', fetched: '2026-08-13'}

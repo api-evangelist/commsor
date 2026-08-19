@@ -40,3 +40,10 @@ hosts:
 notes:
 - 'A security contact IS published, but as page copy at https://www.commsor.com/security
   (security@commsor.com), not as an RFC 9116 security.txt.'
+reverified:
+  date: '2026-08-13'
+  result: unchanged — every /.well-known/* path above still returns 404; www.commsor.com
+    answers 'Invalid .well-known request' and dashboard.commsor.com returns its Next.js
+    404 shell. Also probed https://help.commsor.com/.well-known/agent-card.json (302 to
+    docs.platform.clearslide.com, off-domain) and https://commsor.theswarm.com/.well-known/agent-card.json
+    (404). No WellKnown or SecurityTxt pointer wired.

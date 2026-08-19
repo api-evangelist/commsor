@@ -1,4 +1,4 @@
-generated: '2026-08-04'
+generated: '2026-08-13'
 method: searched
 source: https://status.commsor.com/ + https://commsor.theswarm.com/ + https://www.commsor.com/
 summary: >-
@@ -40,10 +40,52 @@ status_page:
   http_status: 200
   components:
   - name: Commsor Application
+    state: Operational
+  - name: Dashboard
     description: 'The main interface for interacting with the Commsor app. If it''s
       down, you may be unable to log in or access your account.'
     state: Operational
-  observed: '2026-08-04'
+  overall: All services are online
+  observed: '2026-08-13'
+  note: >-
+    Re-verified 2026-08-13 — the status page is still live and green three weeks
+    after the acquisition announcement, and now lists a second component
+    (Dashboard) alongside Commsor Application.
+site_integrity:
+  observed: '2026-08-13'
+  note: >-
+    The marketing site was last published 2026-07-23 (the acquisition-announcement
+    day) and has since decayed: two links in the primary navigation are broken or
+    point off-domain.
+  broken_or_diverted_links:
+  - link: Pricing
+    url: https://www.commsor.com/pricing
+    http_status: 404
+    note: linked from the site nav; returns the Webflow 404 page
+  - link: Help Center
+    url: https://help.commsor.com/en/
+    http_status: 302
+    redirects_to: https://docs.platform.clearslide.com
+    note: >-
+      help.commsor.com is a stale CNAME to cdn.webflow.com that now 302s off-domain
+      to ClearSlide's documentation host — an unrelated company. The live knowledge
+      base is https://support.commsor.com/ (Pylon, HTTP 200). A dangling subdomain
+      handing visitors to a third party is a hygiene/brand issue worth reporting to
+      the provider.
+  - link: /warm-intros
+    url: https://www.commsor.com/warm-intros
+    http_status: 404
+    note: linked from the site footer/nav; page removed
+acquirer_surface:
+  note: >-
+    Recorded for migration context only — NOT credited to Commsor. The acquirer,
+    The Swarm, does operate a developer surface, so the wind-down destination is a
+    more API-capable platform than Commsor was.
+  observed: '2026-08-13'
+  hosts:
+  - {url: 'https://docs.theswarm.com/', http_status: 200}
+  - {url: 'https://api.theswarm.com/', http_status: 200}
+  - {url: 'https://www.theswarm.com/llms.txt', http_status: 200}
 changelog:
   published: false
   note: >-
