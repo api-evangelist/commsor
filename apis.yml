@@ -17,6 +17,17 @@ description: 'Commsor is a go-to-network (GTN) platform for B2B revenue teams. I
   product sunset date has been published and the application and status page remain
   live.'
 url: https://raw.githubusercontent.com/api-evangelist/commsor/refs/heads/main/apis.yml
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 image: https://cdn.prod.website-files.com/66d99f67e13dcd48af21215f/66fa7f64855ba4e9e0494fed_favicon_256x256.png
 x-type: company
 x-source: harvest:secondary-market
