@@ -64,26 +64,67 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Commsor is a go-to-network (GTN) platform for B2B revenue teams. It maps the collective
-relationship graph of a company's employees, executives, investors, advisors, customers
-and community, then surfaces the warmest path into a target account so sellers and
-marketers can source pipeline through trusted introductions and referrals instead of cold
-outbound.
+> **Acquired or rebranded.** This company was acquired, merged or renamed. Its API, if it still exists, is offered under another name. This profile is kept as a historical record and is not maintained or rated.
 
-**Status.** On 2026-07-23 The Swarm announced it is acquiring Commsor and winding down the
-Commsor products, folding selected features into The Swarm. No product sunset date has been
-published; the application and status page remain live.
+Commsor is a go-to-network (GTN) platform for B2B revenue teams. It maps the collective relationship graph of a company's employees, executives, investors, advisors, customers and community, then surfaces the warmest path into a target account so sellers and marketers can source pipeline through trusted introductions and referrals instead of cold outbound. The platform ingests relationship and engagement data from connected systems (HubSpot CRM, uploaded lists, and other connectors), scores network signals against company events, and routes intro requests to the person best placed to make them. Commsor previously operated a community-operations analytics platform and publishes a knowledge base, a Go-to-Network methodology curriculum (GTN University), guides and a blog. It does not currently publish a public developer portal, OpenAPI definition, or self-serve API documentation; a legacy REST API was enabled per-account on request during the community-platform era, and a Zapier app remains the documented programmatic write path. On 2026-07-23 The Swarm announced it is acquiring Commsor and winding down the Commsor products, folding selected features into The Swarm; no product sunset date has been published and the application and status page remain live.
 
-**API surface.** Commsor publishes no public developer portal, OpenAPI definition, or
-self-serve API documentation. Every `*.commsor.com` API-shaped subdomain resolves to the
-Webflow wildcard CDN; the application host answers unknown paths with a single-page-app
-shell. A legacy REST API existed on the retired community-operations platform and was
-enabled per account on request. A Zapier app remains the documented programmatic write
-path. See `x-contract-discovery` in `apis.yml` for the full probe record.
+**Areas:** Company · Sales · Marketing · Go To Network · Referrals · Relationship Intelligence · Revenue Operations · Community · B2B
 
-- https://www.commsor.com/
-- https://status.commsor.com/
-- https://www.commsor.com/security
-- https://support.commsor.com/
-- https://commsor.theswarm.com/ — acquisition announcement
-- https://forgeglobal.com/commsor_stock/
+## Commsor on APIs.io (historical record)
+
+Everything profiled for Commsor is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/commsor/](https://apis.io/providers/commsor/)** — or go straight to one of the APIs or properties below.
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### Security (3)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Commsor Domain Security](https://apis.io/security/commsor/commsor-domain-security/)
+- [Commsor Trust Center](https://apis.io/security/commsor/commsor-trust-center/)
+- [Commsor Vulnerability Disclosure](https://apis.io/security/commsor/commsor-vulnerability-disclosure/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Commsor Plans Pricing](https://apis.io/plans/commsor/commsor-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Commsor Rate Limits](https://apis.io/rate-limits/commsor/commsor-rate-limits/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.commsor.com/)
+- [Sign up](https://www.commsor.com/get-started)
+- [Support](https://support.commsor.com/)
+- [Blog](https://www.commsor.com/blog)
+- [Security](https://www.commsor.com/security)
+- [Compliance](https://www.commsor.com/security)
+- [Terms of service](https://www.commsor.com/terms-and-conditions)
+- [Privacy policy](https://www.commsor.com/privacy-policy)
+- [GitHub](https://github.com/commsor)
+- [Status](https://status.commsor.com/)
+
+## API Evangelist rating
+
+**Not rated** — this company is recorded as acquired or rebranded, so no score is published. If it is in fact operating, say so on this repository and it will be re-profiled.
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Commsor: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/commsor/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
